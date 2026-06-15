@@ -113,7 +113,7 @@ _SSD1683_START_SEQUENCE = (
     b"\x0c\x00\x04\x8b\x9c\xa4\x0f"  # BOOST_SOFTSTART
     b"\x11\x00\x01\x03"  # RAM data entry mode
     b"\x3c\x00\x01\x03"  # border
-    b"\x21\x00\x02\x00\x00"  # DISP_CTRL1 (no source-line shift; matches adafruit_epd PR #111)
+    b"\x21\x00\x02\x00\x00"  # DISP_CTRL1 (no source-line shift)
     b"\x3f\x00\x01\x07"  # END_OPTION
     b"\x03\x00\x01\x17"  # gate voltage
     b"\x04\x00\x03\x41\xa8\x32"  # source voltage

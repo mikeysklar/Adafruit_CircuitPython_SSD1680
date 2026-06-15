@@ -2,11 +2,10 @@
 #
 # SPDX-License-Identifier: Unlicense
 
-"""4-gray grayscale info card for the Adafruit 4.2" 400x300 E-Ink Display (#6381).
+"""4-gray "ThinkInk" info card for the Adafruit 4.2" 400x300 E-Ink Display (#6381).
 
-displayio / SSD1683 driver. Layout mirrors the adafruit_epd PR #111 example:
-big built-in font (scale 3-4) and a tall 4-box gray ramp that fills the panel.
-FPC-190 ribbon. Tested on Adafruit Feather RP2040 ThinkInk.
+A grayscale take on the factory demo: product text plus a 4-level gray ramp
+(white / light / dark / black) that shows all four shades at once.
 """
 
 import time
@@ -60,7 +59,7 @@ bg = displayio.Bitmap(W, H, 4)
 bg.fill(WHITE)
 g.append(displayio.TileGrid(bg, pixel_shader=pal))
 
-# Big text, sized to fill the 400px width (matches PR #111: scale 3-4)
+# Big text, sized to fill the 400px width
 texts = [
     ("Adafruit ThinkInk", 6, 10, 3, 0x000000),
     ('4.2" 400x300', 6, 50, 4, 0x000000),
